@@ -1,7 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/home/home';
-import Harvester from './components/harvester/harvester';
+// import Harvester from './components/harvester/harvester';
+// import Gitignore from './components/gitignore';
 
 import './App.scss';
 
@@ -14,7 +15,7 @@ const App = () => {
       </div>
       <Switch>
         <Route exact path="/"><Home/></Route>
-        <Route path="/harvester"><Harvester/></Route>
+        {/* <Route path="/harvester"><Harvester/></Route> */}
       </Switch>
     </div>
   );
