@@ -57,10 +57,10 @@ const Harvester = () => {
         <p>Project Type:</p>
         <div className="checkbox-wrap">
           <label>React
-            <input id="react" className="checkbox" type="radio" value="react" onChange={() => setProjectType('react')} checked={projectType === 'react' ? true : false}/>
+            <input id="har-react" className="checkbox" type="radio" value="react" onChange={() => setProjectType('react')} checked={projectType === 'react' ? true : false}/>
           </label>
           <label>Angular
-            <input id="angular" className="checkbox" type="radio" value="angular" onChange={() => setProjectType('angular')} checked={projectType === 'angular' ? true : false}/>
+            <input id="har-angular" className="checkbox" type="radio" value="angular" onChange={() => setProjectType('angular')} checked={projectType === 'angular' ? true : false}/>
           </label>
         </div>
         <button onClick={(e) => handleConversion(e)}>Convert</button>

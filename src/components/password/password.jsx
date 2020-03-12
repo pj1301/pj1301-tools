@@ -71,7 +71,7 @@ const Password = () => {
         <button onClick={(e) => handleSubmit(e)}>Generate</button>
       </form>
       <div className="display">
-        <textarea id="pw-display" name="display-pw" cols="30" rows="1" value={password}></textarea>
+        <textarea id="pw-display" name="display-pw" cols="30" rows="1" value={password} readOnly></textarea>
         <button onClick={() => copyContent()}>Copy</button>
       </div>
     </div>
