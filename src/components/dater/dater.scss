@@ -1,0 +1,21 @@
+.btn-wrap {
+  width: 100%;
+  display: flex;
+  flex-directon: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  input {
+    width: 75%;
+    height: 25px;
+    border-radius: 3px;
+    padding: 2px;
+  }
+}

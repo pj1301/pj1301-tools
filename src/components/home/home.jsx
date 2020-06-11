@@ -3,6 +3,7 @@ import './home.scss';
 import Harvester from '../harvester/harvester.jsx';
 import Gitignore from '../gitignore/gitignore.jsx';
 import Password from '../password/password.jsx';
+import Dater from '../dater/dater.jsx';
 
 const Home = () => {
 
@@ -17,6 +18,9 @@ const Home = () => {
       <div className="card">
         <Password />
       </div>
+        <div className="card">
+          <Dater />
+        </div>
     </div>
   )
 }
