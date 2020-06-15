@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
 import './gitignore.scss';
-// import download from 'downloadjs';
-// import * as reactGitignore from '../../assets/gitignore-configs/react/.gitignore';
-// import * as angularGitignore from '../../assets/gitignore-configs/angular/.gitignore';
-// import * as nodeGitignore from '../../assets/gitignore-configs/node/.gitignore';
+import download from 'downloadjs';
+import { data } from '../../assets/gitignore-configs/gitignore-configs';
 
 const Gitignore = () => {
 
   const [ projectType, setProjectType ] = useState('');
+  const [ gitignoreContent, setGitignoreContent ] = useState('');
 
-  const chooseConfig = (event) => {
+  const downloadConfig = (event) => {
     event.preventDefault();
-    // switch(projectType) {
-    //   case 'react':
-    //     download(reactGitignore, '.gitignore', 'text');
-    //     break;
-    //   case 'angular':
-    //     download(reactGitignore, '.gitignore', 'text');
-    //     break;
-    //   case 'node':
-    //     download(reactGitignore, '.gitignore', 'text');
-    //     break;
-    //   default:
-    //     return;
-    // }
+    if (!projectType) return;
+    const content = data[projectType];
+    download(content, '.gitignore', 'text');
+  }
+  
+  const copyConfig = (event) => {
+    event.preventDefault();
+    if (!projectType) return;
+    const content = data[projectType];
+    const input = document.createElement('textarea');
+    const card = document.querySelector('div.gitignore-card');
+    card.append(input);
+    input.innerText = content;
+    input.select();
+    document.execCommand('copy');
+    input.remove();
   }
 
   return (
@@ -42,7 +44,10 @@ const Gitignore = () => {
             <input id="gi-node" className="checkbox" type="radio" value="node" onChange={() => setProjectType('node')} checked={projectType === 'node' ? true : false}/>
           </label>
         </div>
-        <button onClick={(e) => chooseConfig(e)}>Download File</button>
+        <div className="btn-wrap">
+          <button onClick={(e) => downloadConfig(e)}>Download File</button>
+          <button onClick={(e) => copyConfig(e)}>Copy Contents</button>
+        </div>
       </form>
     </div>
   )

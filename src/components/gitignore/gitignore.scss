@@ -49,15 +49,22 @@ label {
       }
     }
 
-    button {
-      width: 120px;
-      padding: 5px;
-      font-size: 0.9em;
-      align-self: center;
-      border-radius: 5px;
-      background: $purple;
-      color: white;
-      margin: 10px 0;
+    btn-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      
+      button {
+        width: 120px;
+        padding: 5px;
+        font-size: 0.9em;
+        align-self: center;
+        border-radius: 5px;
+        background: $purple;
+        color: white;
+        margin: 10px 5px;
+      }
     }
   }
 }
