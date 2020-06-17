@@ -19,11 +19,13 @@ const Gitignore = () => {
     event.preventDefault();
     if (!projectType) return;
     const content = data[projectType];
+    const {length} = content;
     const input = document.createElement('textarea');
     const card = document.querySelector('div.gitignore-card');
     card.append(input);
-    input.innerText = content;
-    input.select();
+    input.innerHTML = `<pre>${content}</pre>`;
+    input.focus();
+    input.setSelectionRange(5, 5+length);
     document.execCommand('copy');
     input.remove();
   }
