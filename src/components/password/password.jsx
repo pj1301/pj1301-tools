@@ -55,20 +55,22 @@ const Password = () => {
       <p>Confirm inputs:</p>
       <form>
         <div className="option-wrap">
-          <label>Upper Case
+          <label>UP
             <input className="checkbox" type="checkbox" onChange={() => addType('cases')} checked={types.includes('cases')}/>
           </label>
-          <label>Numeric
+          <label>123
             <input className="checkbox" type="checkbox" onChange={() => addType('numbers')} checked={types.includes('numbers')}/>
           </label>
-          <label>Symbol
+          <label>$
             <input className="checkbox" type="checkbox" onChange={() => addType('symbols')} checked={types.includes('symbols')}/>
           </label>
         </div>
-        <label className="char-length">PW Length:
-          <input type="number" value={characters} onChange={(e) => setCharacters(e.target.value)} />
-        </label>
-        <button onClick={(e) => handleSubmit(e)}>Generate</button>
+        <div className="length-wrap">
+          <label className="char-length">Chars
+            <input type="number" value={characters} onChange={(e) => setCharacters(e.target.value)} />
+          </label>
+          <button onClick={(e) => handleSubmit(e)}>Generate</button>
+        </div>
       </form>
       <div className="display">
         <input id="pw-display" name="display-pw" value={password} readOnly/>
