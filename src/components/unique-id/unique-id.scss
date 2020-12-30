@@ -1,0 +1,17 @@
+.row-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    label {
+      margin: 5px;
+    }
+  
+    input {
+      width: 65%;
+      height: 25px;
+      border-radius: 3px;
+      padding: 2px;
+    }
+  }

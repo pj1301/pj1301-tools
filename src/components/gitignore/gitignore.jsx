@@ -6,7 +6,6 @@ import { data } from '../../assets/gitignore-configs/gitignore-configs';
 const Gitignore = () => {
 
   const [ projectType, setProjectType ] = useState('');
-  const [ gitignoreContent, setGitignoreContent ] = useState('');
 
   const downloadConfig = (event) => {
     event.preventDefault();

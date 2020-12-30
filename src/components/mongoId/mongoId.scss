@@ -1,0 +1,13 @@
+.row-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    input {
+      width: 75%;
+      height: 25px;
+      border-radius: 3px;
+      padding: 2px;
+    }
+  }
